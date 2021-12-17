@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+    :root{
+      --soft-blue:hsl(215, 51%, 70%);
+      --Cyan: hsl(178, 100%, 50%);
+      --very-dark-blue: hsl(217, 54%, 11%);
+      --white: hsl(0, 0%, 100%);
+    }
+
+    *{
+      background: var(--very-dark-blue);
+      color:var(--white);
+    }
+
+    .container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container div {
+      margin: 5rem auto;
+      width:300px;
+      height:500px;
+      background: hsl(216, 50%, 16%);
+      border-radius: 10px;
+      padding:1rem;
+      box-sizing: border-box;
+    }
+    img{
+      display: block;
+      width:250px;
+      height:250px;
+      margin:0rem auto;
+    }
+    p{
+      font-weight: 600;
+      background: hsl(216, 50%, 16%);
+      margin-left:1rem;
+      font-size: 18px;
+    }
+
+    p:nth-of-type(2){
+      font-weight: 300;
+      color: var(--soft-blue);
+    }
+    p img{
+      width:10px;
+      height: 15px;
+      display: inline-block;
+      stroke: hsl(216, 50%, 16%);
+    }
+    p img:nth-of-type(2){
+      margin-left: 2.5rem;
+      width:15px;
+      height: 15px;
+      display: inline-block;
+      stroke: hsl(216, 50%, 16%);
+    }
+
+    #time{
+      color:var(--soft-blue);
+      background-color: hsl(216, 50%, 16%);
+    }
+    hr{
+      background-color:hsl(216, 50%, 16%);
+    }
+    span img{
+      margin-top:.5rem;
+      width:20px;
+      height:20px;
+      border:2px solid var(--Cyan);
+      border-radius:50%;
+      display: inline;
+      background:hsl(216, 50%, 16%);
+    }
+    #card-footer{
+      text-align: center; background-color: hsl(216, 50%, 16%);
+    }
+   .created-by{
+     color:var(--soft-blue);
+     background-color: hsl(216, 50%, 16%);
+   }
+   #text-footer{
+     margin-left:1rem;
+   }
+    .dev-name{
+      background-color: hsl(216, 50%, 16%);
+    }
+    .attribution {margin:1rem;font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div>
+      <img src="images/image-equilibrium.jpg" alt="card-image">
+      <p>Equilibrium #3429</p>
+      <p>Our Equilibrium collection promotes balance and calm.</p>
+      
+      <p>
+        <img src="images/icon-ethereum.svg" alt="ethereum-logo">
+        0.041 ETH 
+        <img src="images/icon-clock.svg" alt="clock">
+        <span id="time"> 3 days left</span>
+      </p>
+  
+
+      <hr>
+      <span id="card-footer">
+        <img src="images/image-avatar.png" alt="avatar">
+        <span id="text-footer">
+          <span class="created-by">Creation of </span> <span class="dev-name">Jules Wyvern</span> 
+        </span>
+        
+      </span>
+     
+    </div>
+  </div>
+  
+ 
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Ankit Kumain</a>.
+  </div>
+</body>
+</html>
