@@ -23,46 +23,69 @@
       background: var(--very-dark-blue);
       color:var(--white);
     }
-    
-    .container{
+    body{
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
+      height: 100%;
     }
-    .container div {
-      margin: 5rem auto;
-      width:20rem;
+
+    .nft-card{
+      margin:5rem auto;
+      width:18.5rem;
       height:32rem;
       background: hsl(216, 50%, 16%);
       border-radius: 10px;
-      padding:1rem;
+      padding:1.5rem;
       box-sizing: border-box;
     }
-    div img{
-      display: block;
-      width:250px;
-      height:250px;
-      margin:0rem auto;
+
+    .card{  
+        width: 250px;
+        height: 250px;
+        position: relative;
+        display: inline-block;
+    }
+     
+    .card .img-top {
+        cursor:pointer;
+        background:center;
+        height: 50px;
+        width: 50px;
+        display: none;
+        position: absolute;
+        margin:7rem 6rem auto;
+        top: 0;
+        left: 0;
+        z-index: 99;
+    }
+    .card:hover .img-top {
+      display: inline;
     }
     
-    div img:hover{
+    div img{
       display: block;
+      margin-left: auto;
+      margin-right: auto;
       width:250px;
       height:250px;
-      background: url("images/icon-view.svg") no-repeat;
-      opacity:.5;
-      margin:0rem auto;
+      
+    }
+    
+    .card:hover{
+     cursor: pointer;
+     opacity: .5;
     }
 
     p{
-      font-weight: 600;
       background: hsl(216, 50%, 16%);
-      margin-left:1rem;
+    }
+    p:first-of-type{
+      font-weight: 600;
       font-size: 18px;
     }
-
     p:nth-of-type(2){
-      font-weight: 300;
       color: var(--soft-blue);
     }
     p img{
@@ -72,7 +95,7 @@
       stroke: hsl(216, 50%, 16%);
     }
     p img:nth-of-type(2){
-      margin-left: 2.5rem;
+      margin-left: 4.5rem;
       width:15px;
       height: 15px;
       display: inline-block;
@@ -82,30 +105,53 @@
     #time{
       color:var(--soft-blue);
       background-color: hsl(216, 50%, 16%);
+      float:right;
     }
-    hr{
-      background-color:hsl(216, 50%, 16%);
+    #curr-state{
+      border:2px solid hsl(215, 32%, 27%);
+      border-top:none;
+      border-left:none;
+      border-right:none;
+      margin-top:2rem;
+      padding-bottom:1rem;
     }
-    span img{
-      margin-top:.5rem;
+ 
+    #card-footer{
+      display: flex;
+      justify-content: left;
+      background-color: hsl(216, 50%, 16%);
+      width:auto;
+     
+      padding-left:0px;
+      margin-left: 1px;
+      box-sizing:border-box;
+    }
+
+    #avatar-img{
       width:20px;
       height:20px;
       border:2px solid var(--Cyan);
       border-radius:50%;
-      display: inline;
+      display: inline-block;
       background:hsl(216, 50%, 16%);
+      margin: 0 0;
+      margin-right:.5rem;
     }
-    #card-footer{
-      text-align: center; background-color: hsl(216, 50%, 16%);
-    }
-   .created-by{
+    
+   #creation{
+     background:green;
+     padding-left:5px;
      color:var(--soft-blue);
      background-color: hsl(216, 50%, 16%);
    }
-   #text-footer{
+   #footer-text{
+     vertical-align: top;
+     font-size: 1em;
+     display: inline-block;
      margin-left:1rem;
    }
-    .dev-name{
+    #dev-name{
+      padding-left:4px;
       background-color: hsl(216, 50%, 16%);
     }
     .attribution {margin:1rem;font-size: 11px; text-align: center; }
@@ -115,32 +161,30 @@
 <body>
 
   <div class="container">
-    <div>
-      <img src="images/image-equilibrium.jpg" alt="card-image">
+    <div class="nft-card"> 
+      <div class="card">
+        <img id="card-img" src="images/image-equilibrium.jpg" alt="card-image">
+        <img src="images/icon-view.svg" class="img-top" alt="Card Front">
+      </div>
+      
       <p>Equilibrium #3429</p>
       <p>Our Equilibrium collection promotes balance and calm.</p>
       
-      <p>
+      <p id="curr-state">
         <img src="images/icon-ethereum.svg" alt="ethereum-logo">
         0.041 ETH 
         <img src="images/icon-clock.svg" alt="clock">
         <span id="time"> 3 days left</span>
       </p>
-  
 
-      <hr>
-      <span id="card-footer">
-        <img src="images/image-avatar.png" alt="avatar">
-        <span id="text-footer">
-          <span class="created-by">Creation of </span> <span class="dev-name">Jules Wyvern</span> 
-        </span>
-        
-      </span>
+      <div id="card-footer">
+      <img id="avatar-img" src="images/image-avatar.png" alt="avatar"> 
+      <span id="creation">Creation of </span> <span id="dev-name"> Jules Wyvern</span>  
+      </div>
      
     </div>
-  </div>
+  </div> 
   
- 
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
