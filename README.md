@@ -11,7 +11,6 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
@@ -97,10 +96,6 @@ Some code snippets, see below:
       background-color: hsl(216, 50%, 16%);
     }
 ```
-
-### Continued development
-
-I would practice more projects where I can use flexbox and change image on hover.
 
 ### Useful resources
 
