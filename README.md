@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](/images/car-view.png)
+![](/images/card-view.png)
 
 ### Links
 
@@ -37,7 +37,7 @@ Users should be able to:
 
 ## My process
 
-I started with writing all my HTML that I could possibly figure out seeing the challenge screenshots. Then I started adding required CSS for each part of the project. I was not aware how to change image on hover to add the preview feature so I searched on google and stumbled upon an article that I have linked in the- [resources section](#useful-resources). Finally I had some problems with the footer of my card as the avatar and text around it was not getting aligned in the same line. So I tried few tricks and eventually end up getting the desired result using flexboxes.
+I started with writing all my HTML that I could possibly figure out seeing the challenge screenshots. Then I started adding required CSS for each part of the project. I was not aware how to change image on hover to add the preview feature so I searched on google and stumbled upon an article that I have linked in the [resources section](#useful-resources). Finally I had some problems with the footer of my card as the avatar and text around it was not getting aligned in the same line. So I tried few tricks and eventually end up getting the desired result using flexboxes.
 ### Built with
 
 - Semantic HTML5 markup
